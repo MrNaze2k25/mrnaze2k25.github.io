@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MrNaze</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.postimg.cc/WzpJFbh6/logo-M.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Bulles -->
+    <div class="bubbles-container">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a class="logo">MrNaze</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+      <div class="header-wrapper">
+        <div class="header-content">
+          <h1>MrNaze</h1>
+          <p>
+            Étudiant en Bac Pro CIEL (Cybersécurité, Informatique et Réseaux,
+            Électronique)
+          </p>
+
+          <h2 id="Contacte" class="Contacte">Me contacter :</h2>
+          <a
+            href="https://discord.com/users/1355288515109322878"
+            class="cta-button"
+            target="_blank"
+          >
+            <img
+              src="https://i.postimg.cc/430nBbLz/discord.png"
+              style="height: 40px"
+            />
+          </a>
+        </div>
+        <div class="header-image">
+          <div class="profile-image">
+            <img
+              src="https://i.postimg.cc/bv20pJtc/logo.jpg"
+              alt="MrNaze"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Compétences -->
+    <section id="competences">
+      <h2 class="section-title">Mes compétences</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 class="title_card">💻 Gestion des systèmes</h3>
+          <ul>
+            <li>Administration Windows Server</li>
+            <li>Administration Linux (Ubuntu, Debian)</li>
+            <li>Virtualisation VMware vSphere et Hyper-V</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="title_card">💾 Hébergement</h3>
+          <ul>
+            <li>
+              Création de serveurs pour le stockage ou l’hébergement (Proxmox,
+              Pterodactyl, TrueNAS)
+            </li>
+            <li>Configuration IP, pare-feu pour accès à distance</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="title_card">💡 Codage</h3>
+          <ul>
+            <li>Codage Python (bots Discord, mini-jeux)</li>
+            <li>Codage HTML, CSS, Java</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets">
+      <h2 class="section-title">Mes projets</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="title_card">🏠 Maison Connectée</h3>
+            <p>
+              Mon plus grand projet futur est de créer ma propre maison
+              connectée : volets et lumières commandés vocalement, attribution IP
+              intelligente, serveur personnel pour hébergement web, bots et
+              sauvegardes, avec accès à distance sécurisé.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="anti_copie">
+      <p>© 2025 MrNaze ©</p>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
