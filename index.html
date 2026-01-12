@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MrNaze</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.postimg.cc/WzpJFbh6/logo-M.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Bulles -->
+    <div class="bubbles-container">
+      <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+      <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+      <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a class="logo">MrNaze</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#snake">Snake</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+      <div class="header-wrapper">
+        <div class="header-content">
+          <h1>MrNaze</h1>
+          <p>
+            Étudiant en Bac Pro CIEL (Cybersécurité, Informatique et Réseaux,
+            Électronique)
+          </p>
+
+          <h2 class="Contacte">Me contacter :</h2>
+          <a
+            href="https://discord.com/users/1355288515109322878"
+            class="cta-button"
+            target="_blank"
+          >
+            <img src="https://i.postimg.cc/430nBbLz/discord.png" style="height:40px"/>
+          </a>
+        </div>
+
+        <div class="header-image">
+          <div class="profile-image">
+            <img src="https://i.postimg.cc/bv20pJtc/logo.jpg" style="width:100%;height:100%;object-fit:cover"/>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Compétences -->
+    <section id="competences">
+      <h2 class="section-title">Mes compétences</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 class="title_card">💻 Gestion des systèmes</h3>
+          <ul>
+            <li>Administration Windows Server</li>
+            <li>Administration Linux</li>
+            <li>Virtualisation</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="title_card">💾 Hébergement</h3>
+          <ul>
+            <li>Proxmox, Pterodactyl, Pelican</li>
+            <li>Réseaux & pare-feu</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="title_card">💡 Codage</h3>
+          <ul>
+            <li>Python (bots, jeux)</li>
+            <li>HTML / CSS / JS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets">
+      <h2 class="section-title">Mes projets</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3 class="title_card">🏠 Maison Connectée</h3>
+          <p>Projet futur domotique & serveurs.</p>
+        </div>
+
+        <div class="project-card">
+          <h3 class="title_card">🕵️‍♂️ Métier Futur</h3>
+          <p>Pentester & cybersécurité.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🐍 SNAKE JOUABLE -->
+    <section id="snake">
+      <h2 class="section-title">🐍 Snake</h2>
+
+      <canvas id="gameCanvas" width="680" height="680"></canvas>
+
+      <p class="snake-text">
+        Exemple de jeu en Python adapté pour le web
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 MrNaze ©</p>
+    </footer>
+
+    <script src="snake.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      menuToggle.onclick = () => navLinks.classList.toggle("active");
+    </script>
+
+  </body>
+</html>
